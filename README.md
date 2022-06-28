@@ -13,17 +13,25 @@
 - 딕셔너리 for문
 
 2. DataFrame
-- 빈 데이터프레임 만들기
-- 행 개수 출력
-- 열 개수 출력
-- Null값이 아닌 행 개수 출력
-- 특정 행 출력 - iloc
+- 데이터프레임 만들기 1 - pd.DataFrame()
+- 데이터프레임 만들기 2 - pd.DataFrame(np.zeros(( a , b )))
+- 데이터프레임 만들기 3
+- 데이터프레임 특정값 불러오기 - df.loc [ 행index , "column명" ] / df.iloc [ 행index , column_index ]
+- 데이터프레임 행 값 불러오기 - df[ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
+- 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ]
+- 데이터프레임 값 변경 - df.replace
+- 데이터프레임 조건 설정
+- 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
+- 열 개수 출력 - df.shape[1] / len(df.columns)
+- Null 값이 아닌 행 개수 출력 - df.count ( )
 - for문 활용
 
 3. Series
-- 빈 시리즈 만들기
-- 행 개수 출력
-- Null값이 아닌 행 개수 출력
+- 시리즈 만들기 - pd.Series()
+- 시리즈 값 변경 - s [ ] / s.replace( 위치, 변경값, inplace=True )
+- 시리즈 여러값을 한번에 변경 - s.replace([변경 전 값], [변경 후 값]
+- 시리즈 행 개수 출력 - len ( s ) / s.size / len(s.index)
+- Null 값이 아닌 행 개수 출력 - s.count ( )
 
 
 # 02_Basic_Python
