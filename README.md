@@ -18,7 +18,7 @@
 - 데이터프레임 만들기 3
 - 데이터프레임 특정값 불러오기 - df.loc [ 행index , "column명" ] / df.iloc [ 행index , column_index ]
 - 데이터프레임 행 값 불러오기 - df[ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
-- 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ]
+- 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ] / df[ "column명" ] [ index ]
 - 데이터프레임 값 변경 - df.replace
 - 데이터프레임 조건 설정
 - 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
