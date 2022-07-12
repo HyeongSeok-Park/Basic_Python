@@ -24,6 +24,8 @@
 - 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
 - 열 개수 출력 - df.shape[1] / len(df.columns)
 - Null 값이 아닌 행 개수 출력 - df.count ( )
+- Null 값 확인 - df.isnull
+- Nulll 값 0으로 대치 - df.fillna( 0 )
 - for문 활용
 
 3. Series
