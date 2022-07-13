@@ -3,6 +3,9 @@
 # 01_Basic_Python
 
 1. 기본 파이썬
+- Pandas 불러오기
+- Numpy 불러오기
+- 경고문 생략
 - 문자열 변수 생성
 - 문자열 슬라이싱
 - 문자열 수정
@@ -23,9 +26,14 @@
 - 데이터프레임 조건 설정
 - 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
 - 열 개수 출력 - df.shape[1] / len(df.columns)
-- Null 값이 아닌 행 개수 출력 - df.count ( )
-- Null 값 확인 - df.isnull
-- Nulll 값 0으로 대치 - df.fillna( 0 )
+- 결측값이 아닌 행 개수 출력 - df.count ( )
+- 결측값 확인 - df.isnull
+- 결측값이 있는 행 제거 - df.dropna( axis = 0 )
+- 결측값이 있는 행 제거 - df.dropna( axis = 1 )
+- 결측값을 특정값으로 대치 - df.fillna( 특정값 )
+- 결측값을 앞 방향으로 채우기 - df.fillna(method = "ffill" or "pad")
+- 결측값을 뒷 방향으로 채우기 - df.fillna(method = "bfill" or "backfill")
+- 특정 column의 결측치 치환 - np.where() & pd.notnull()
 - for문 활용
 
 3. Series
@@ -33,7 +41,7 @@
 - 시리즈 값 변경 - s [ ] / s.replace( 위치, 변경값, inplace=True )
 - 시리즈 여러값을 한번에 변경 - s.replace([변경 전 값], [변경 후 값]
 - 시리즈 행 개수 출력 - len ( s ) / s.size / len(s.index)
-- Null 값이 아닌 행 개수 출력 - s.count ( )
+- 결측값이 아닌 행 개수 출력 - s.count ( )
 
 
 # 02_Basic_Python
@@ -59,6 +67,7 @@
 3. 라이브러리 Pandas
 - "0"값을 가지는 데이터프레임 만들기 - pd.DataFrame()
 - numpy 라이브러리를 사용하여 위와 같은 형태의 데이터프레임 만들기
+- 결측값 채우기 회수 제한 (fillna(method="ffill", limit=number)
 
 
 # 사용환경
