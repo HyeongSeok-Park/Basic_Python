@@ -23,7 +23,9 @@
 - 데이터프레임 행 값 불러오기 - df[ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
 - 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ] / df[ "column명" ] [ index ]
 - 데이터프레임 값 변경 - df.replace
-- 데이터프레임 조건 설정
+- 데이터프레임 조건에 따라 불러오기 - df[ ( 조건식 ) ]
+- column명 바꾸기 - df.rename ( columns = { "before1" : "after1", ... } )
+- column명 한번에 모두 바꾸기 - df.columns = [ "name1" , "name2",  ... ]
 - 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
 - 열 개수 출력 - df.shape[1] / len(df.columns)
 - 결측값이 아닌 행 개수 출력 - df.count ( )
@@ -34,6 +36,7 @@
 - 결측값을 앞 방향으로 채우기 - df.fillna(method = "ffill" or "pad")
 - 결측값을 뒷 방향으로 채우기 - df.fillna(method = "bfill" or "backfill")
 - 특정 column의 결측치 치환 - np.where() & pd.notnull()
+- column 별로 value값 확인 - df[ " column명 " ].value_counts()
 - for문 활용
 
 3. Series
