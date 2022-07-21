@@ -19,6 +19,9 @@
 - 데이터프레임 만들기 1 - pd.DataFrame()
 - 데이터프레임 만들기 2 - pd.DataFrame(np.zeros(( a , b )))
 - 데이터프레임 만들기 3
+- 데이터프레임 상위 5행 출력 - df.head( 숫자로 갯수 변경 가능 )
+- 데이터프레임 하위 2행 출력 - df.tail( 숫자로 갯수 변경 가능 )
+- 데이터프레임 랜덤 4행 출력 - df.sample( 숫자로 갯수 변경 가능 )
 - 데이터프레임 특정값 불러오기 - df.loc [ 행index , "column명" ] / df.iloc [ 행index , column_index ]
 - 데이터프레임 행 값 불러오기 - df[ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
 - 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ] / df[ "column명" ] [ index ]
