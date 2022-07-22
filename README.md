@@ -39,7 +39,9 @@
 - 결측값을 앞 방향으로 채우기 - df.fillna(method = "ffill" or "pad")
 - 결측값을 뒷 방향으로 채우기 - df.fillna(method = "bfill" or "backfill")
 - 특정 column의 결측치 치환 - np.where() & pd.notnull()
-- column 별로 value값 확인 - df[ " column명 " ].value_counts()
+- 특정 column에서 고유값 확인(중복값 카운트) - df[ " column명 " ].value_counts()
+- 특정 column에서 고유값 확인(중복 제거) - df[ " column명 " ].unique()
+- 특정 column에서 고유값 수 확인 - df[ " column명 " ].nunique()
 - for문 활용
 
 3. Series
@@ -58,6 +60,7 @@
 - print 기본 옵션
 - 문자열 속 변수 설정
 - 문자열 띄어쓰기
+- f-string
 - 문자열에서 특정 문자 찾기
 - 문자열 분리
 - 리스트 삽입, 제거, 추출
