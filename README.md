@@ -22,6 +22,8 @@
 - 데이터프레임 상위 5행 출력 - df.head( 숫자로 갯수 변경 가능 )
 - 데이터프레임 하위 2행 출력 - df.tail( 숫자로 갯수 변경 가능 )
 - 데이터프레임 랜덤 4행 출력 - df.sample( 숫자로 갯수 변경 가능 )
+- 데이터프레임 특정 열 출력 - df [ [ " 컬럼명 " ] ]
+- 데이터프레임 특정 열 제외하고 출력 - df[df.columns.difference([" 컬럼명 "])]
 - 데이터프레임 특정값 불러오기 - df.loc [ 행index , "column명" ] / df.iloc [ 행index , column_index ]
 - 데이터프레임 행 값 불러오기 - df[ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
 - 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ] / df[ "column명" ] [ index ]
@@ -66,6 +68,8 @@
 - 리스트 내용 삽입 - " ".join ( a )
 - 리스트 특정 문자 제거 - a.remove ( )
 - 리스트 특정 문자 추출 - a.pop ( )
+- 행 합계 추가 - df[ ' ' ] = df.sum(axis = 1)
+- 열 합계 추가 - df.loc[ ' ' ] = df.sum(axis = 0)
 - 튜플
 - 딕셔너리
 - 집합
