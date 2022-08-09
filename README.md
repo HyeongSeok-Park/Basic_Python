@@ -29,11 +29,13 @@
 - 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ] / df[ "column명" ] [ index ]
 - 데이터프레임 특정 인덱스행 삭제 - df.drop( index = "c" )
 - 데이터프레임 특정 조건을 만족하는 행만 생성 - df [ df [ "column명" ] == "value" ]
-- 데이터프레임 행 삭제 - df.drop( [" column명 "], axis = 1 )
+- 데이터프레임 열 삭제 - df.drop( [" column명 "], axis = 1 )
 - 데이터프레임 값 변경 - df.replace
 - 데이터프레임 조건에 따라 불러오기 - df[ ( 조건식 ) ]
 - column명 바꾸기 - df.rename ( columns = { "before1" : "after1", ... } )
 - column명 한번에 모두 바꾸기 - df.columns = [ "name1" , "name2",  ... ]
+- column명 이름 조회 - df.columns
+- 첫 번째 행을 column으로 지정 - df.rename( columns = df.iloc[0] )
 - 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
 - 열 개수 출력 - df.shape[1] / len(df.columns)
 - 결측값이 아닌 행 개수 출력 - df.count ( )
