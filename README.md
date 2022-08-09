@@ -27,6 +27,9 @@
 - 데이터프레임 특정값 불러오기 - df.loc [ 행index , "column명" ] / df.iloc [ 행index , column_index ]
 - 데이터프레임 행 값 불러오기 - df[ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
 - 데이터프레임 열 값 불러오기 - df[ "column명" ] / df.loc[ : , "column명" ] / df.iloc[ : , index넘버 ] / df[ "column명" ] [ index ]
+- 데이터프레임 특정 인덱스행 삭제 - df.drop( index = "c" )
+- 데이터프레임 특정 조건을 만족하는 행만 생성 - df [ df [ "column명" ] == "value" ]
+- 데이터프레임 행 삭제 - df.drop( [" column명 "], axis = 1 )
 - 데이터프레임 값 변경 - df.replace
 - 데이터프레임 조건에 따라 불러오기 - df[ ( 조건식 ) ]
 - column명 바꾸기 - df.rename ( columns = { "before1" : "after1", ... } )
