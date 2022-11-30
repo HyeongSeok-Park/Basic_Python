@@ -36,6 +36,7 @@
 - column명 한번에 모두 바꾸기 - df.columns = [ "name1" , "name2",  ... ]
 - column명 이름 조회 - df.columns
 - 첫 번째 행을 column으로 지정 - df.rename( columns = df.iloc[0] )
+- 데이터프레임 정렬 - df.sort_values( "column명" , ascending=True )
 - 행 개수 출력 - len ( df ) / df.shape[0] / len(df.index)
 - 열 개수 출력 - df.shape[1] / len(df.columns)
 - 결측값이 아닌 행 개수 출력 - df.count ( )
