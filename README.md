@@ -68,6 +68,7 @@
 - print 기본 옵션
 - 문자열 속 변수 설정
 - f-string
+- 정규표현식 - compile / match / search
 - 문자열 띄어쓰기
 - 문자열 찾기 - a.count( "  " ) / a.index( "  " )
 - 문자열 분리 - a.split( " " )
