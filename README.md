@@ -92,8 +92,8 @@
 - 결측값 채우기 회수 제한 (fillna(method="ffill", limit=number)
 
 4. 데이터프레임
-- 데이터프레임 모든 열 출력
-- 데이터프레임 모든 행 출력
+- 데이터프레임 모든 열 출력 - pd.set_option('display.max_columns', None)
+- 데이터프레임 모든 행 출력 - pd.set_option('display.max_rows', None)
 
 
 # 사용환경
