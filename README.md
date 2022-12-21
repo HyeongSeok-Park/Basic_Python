@@ -85,6 +85,10 @@
 
 2. 라이브러리 Numpy
 - numpy 라이브러리 선언
+- 배열 재정렬 - np.reshape( a , ( n , m ) )
+- 배열 만들기 - np.arange( l ).reshape( n , m )
+- 배열 결합(세로) - np.vstack ( ( a , b ) )
+- 배열 결합(가로) - np.hstack ( ( a , b ) )
 
 3. 라이브러리 Pandas
 - "0"값을 가지는 데이터프레임 만들기 - pd.DataFrame()
