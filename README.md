@@ -20,7 +20,7 @@
 - 데이터프레임 만들기 2 - pd.DataFrame(np.zeros(( a , b )))
 - 데이터프레임 만들기 3
 
-### 데이터 출력
+(데이터 출력)
 - 데이터프레임 상위 출력 - df.head ( 숫자로 갯수 변경 가능 )
 - 데이터프레임 하위 출력 - df.tail ( 숫자로 갯수 변경 가능 )
 - 데이터프레임 랜덤 출력 - df.sample ( 숫자로 갯수 변경 가능 )
@@ -36,8 +36,8 @@
 - 데이터프레임 고유값 출력 1 (중복값 제외) - df [ " column명 " ].unique()
 - 데이터프레임 고유값 출력 2 (중복값 카운트) - df [ " column명 " ].value_counts()
 
-- 데이터 수정
-- - 데이터프레임 값 변경 - df.replace
+(데이터 수정)
+- 데이터프레임 값 변경 - df.replace
 - 데이터프레임 컬럼명 수정 1 (개별 선택) - df.rename ( columns = { "before1" : "after1", ... } )
 - 데이터프레임 컬럼명 수정 2 (모든 컬럼명) - df.columns = [ "name1" , "name2",  ... ]
 - 데이터프레임 행값 컬럼명으로 지정 - df.rename ( columns = df.iloc [ 0 ] )
@@ -57,8 +57,8 @@
 (데이터 삭제)
 - 데이터프레임 행 삭제 1 (행 이름) - df.drop ( index = "a" )
 - 데이터프레임 행 삭제 2 (중복값) - df.drop_duplicates ( [ ' 컬럼명 ' ] ) ========
-- 데이터프레임 행 삭제 2 (인덱스넘버) - df.drop ( [ a ] ) ==========
-- 데이터프레임 행 삭제 3 (인덱스넘버) - df.drop ( df [ df [ ' 컬럼명 ' ] == a ].index ) ====
+- 데이터프레임 행 삭제 3 (인덱스넘버) - df.drop ( [ a ] ) ==========
+- 데이터프레임 행 삭제 4 (인덱스넘버) - df.drop ( df [ df [ ' 컬럼명 ' ] == a ].index ) ====
 - 데이터프레임 열 삭제 (컬럼명) - df.drop( [ " column명 " ] , axis = 1 )
 
 (결측치)
@@ -71,6 +71,7 @@
 - 데이터프레임 결측치 특정 column의 결측치 치환 - np.where() & pd.notnull()
 
 - for문 활용
+- 조건문 활용 - df [ ( 조건식 ) ]  ==
 
 3. Series
 - 시리즈 만들기 - pd.Series()
@@ -78,6 +79,8 @@
 - 시리즈 여러값을 한번에 변경 - s.replace([변경 전 값], [변경 후 값]
 - 시리즈 행 개수 출력 - len ( s ) / s.size / len(s.index)
 - 결측값이 아닌 행 개수 출력 - s.count ( )
+- 최대값 출력 - np.max ( s )  ==
+- 최소값 출력 - np.min ( s )  ==
 
 
 # 02_Basic_Python
