@@ -3,48 +3,54 @@
 # 01_Basic_Python
 
 1. 기본 파이썬
-- Pandas 불러오기
-- Numpy 불러오기
-- 경고문 생략
-- 문자열 변수 생성
-- 문자열 슬라이싱
-- 문자열 수정
-- 공백 제거
-- 리스트 수정, 삭제, 추가, 정렬
-- 리스트 for문
-- 딕셔너리
-- 딕셔너리 for문
+- 경고문 생략 - warnings.filterwarnings('ignore')
+- 문자열 슬라이싱 - a [ index : index ]
+- 문자열 수정 - a.replace ( ' b ' , ' c ' )
+- 공백 제거 - a.strip ( ) / a.rstrip ( ) / a.lstrip ( )
+- 리스트 내용 추가 - a.append ( b ) / a.extend ( b ) 
+- f-string - print ( f ' 문자열 { 변수 } ')
+- 정규표현식 - compile / match / search
 
 2. DataFrame
-- 데이터프레임 만들기 1 - pd.DataFrame()
-- 데이터프레임 만들기 2 - pd.DataFrame(np.zeros(( a , b )))
-- 데이터프레임 만들기 3
+- 데이터프레임 만들기 1 - pd.DataFrame ( )
+- 데이터프레임 만들기 2 - pd.DataFrame ( np.zeros ( ( a , b ) ) )
+- 데이터프레임 만들기 3 - pd.DataFrame({"컬럼명1" : [a], "컬럼명2" : [b]})
 
 (데이터 출력)
-- 데이터프레임 상위 출력 - df.head ( 숫자로 갯수 변경 가능 )
-- 데이터프레임 하위 출력 - df.tail ( 숫자로 갯수 변경 가능 )
-- 데이터프레임 랜덤 출력 - df.sample ( 숫자로 갯수 변경 가능 )
-- 데이터프레임 열 출력 1 (컬럼명) - df [ [ " 컬럼명 " ] ]
-- 데이터프레임 열 출력 2 (선택 열 제외) - df [ df.columns.difference ( [ " 컬럼명 " ] ) ]
-- 데이터프레임 열 출력 3 - df [ "column명" ] / df.loc [ : , "column명" ] / df.iloc [ : , index넘버 ] / df[ "column명" ] [ index ]
-- 데이터프레임 행 출력 - df [ index넘버 : index넘버 ] / df.loc [  ] / df.iloc [  ]
-- 데이터프레임 특정값 출력 - df.loc [ 행index , "column명" ] / df.iloc [ 행index , column_index ]
+- 데이터프레임 상위 출력 - df.head ( ) ; 기본값 5행
+- 데이터프레임 하위 출력 - df.tail ( ) ; 기본값 5행
+- 데이터프레임 랜덤 출력 - df.sample ( ) ; 기본값 5행
+- 데이터프레임 열 출력 1 (컬럼명) - df [ " 컬럼명 " ]
+- 데이터프레임 열 출력 2 (컬럼명) - df [ [ " 컬럼명 " ] ]
+- 데이터프레임 열 출력 3 (선택 열 제외) - df [ df.columns.difference ( [ " 컬럼명 " ] ) ]
+- 데이터프레임 열 출력 4 - df.loc [ 행index , "컬럼명" ]
+- 데이터프레임 열 출력 5 - df.iloc [ 행index , 열index ]
+======================================================
+- 데이터프레임 열 출력 6 - df [ "컬럼명" ] [ index ]
+- 데이터프레임 행 출력 - df [ index : index ] / df.loc [  ] / df.iloc [  ]
+- 데이터프레임 특정값 출력 - df.loc [ 행index , "컬럼명" ] / df.iloc [ 행index , column_index ]
 - 데이터프레임 조건 설정 후 출력 1 - df [ ( 조건식 ) ]
-- 데이터프레임 조건 설정 후 출력 2 - df [ df [ "column명" ] == "value" ]
-- 데이터프레임 정렬 - df.sort_values ( "column명" , ascending=True )
-- 데이터프레임 고유값 카운트 - df [ " column명 " ].nunique()
-- 데이터프레임 고유값 출력 1 (중복값 제외) - df [ " column명 " ].unique()
-- 데이터프레임 고유값 출력 2 (중복값 카운트) - df [ " column명 " ].value_counts()
+- 데이터프레임 조건 설정 후 출력 2 - df [ df [ "컬럼명" ] == "value" ]
+- 데이터프레임 정렬 - df.sort_values ( "컬럼명" , ascending=True )
+- 데이터프레임 고유값 카운트 - df [ " 컬럼명 " ].nunique()
+- 데이터프레임 고유값 출력 1 (중복값 제외) - df [ " 컬럼명 " ].unique()
+- 데이터프레임 고유값 출력 2 (중복값 카운트) - df [ " 컬럼명 " ].value_counts()
+
+(데이터 합치기)
+- 데이터프레임 합치기 - merge ============
 
 (데이터 수정)
 - 데이터프레임 값 변경 - df.replace
 - 데이터프레임 컬럼명 수정 1 (개별 선택) - df.rename ( columns = { "before1" : "after1", ... } )
 - 데이터프레임 컬럼명 수정 2 (모든 컬럼명) - df.columns = [ "name1" , "name2",  ... ]
 - 데이터프레임 행값 컬럼명으로 지정 - df.rename ( columns = df.iloc [ 0 ] )
-- 데이터프레임 모든 열 출력 - pd.set_option('display.max_columns', None) ; 60 =========
-- 데이터프레임 모든 행 출력 - pd.set_option('display.max_rows', None) ; 10 =========
+- 데이터프레임 모든 열 출력 - pd.set_option ('display.max_columns', None) ; 60 =========
+- 데이터프레임 모든 행 출력 - pd.set_option ('display.max_rows', None) ; 10 =========
 - 데이터프레임 행값 타입 변경 - df.astype ( { ' 컬럼명 ' : ' type ' } ) ======
-- 데이터프레임 인덱스 초기화 - df.reset_index(drop=True) ==============
+- 데이터프레임 인덱스 초기화 - df.reset_index (drop=True) ==============
+- 데이터프레임 타입 변경 1 (컬럼명) - df.astype ( ' 타입 ' ) =========
+- 데이터프레임 타입 변경 2 (컬럼명) - df.astype ( { ' 컬럼명 ' : ' 타입 ' } ) =========
+- 데이터프레임 타입 변경 3 (날짜타입) - pd.to_datetime ( df [ ' 컬럼명 ' ] ) ========
 
 (데이터 검색)
 - 행 개수 출력 - len ( df ) / df.shape [ 0 ] / len ( df.index )
@@ -72,6 +78,7 @@
 
 - for문 활용
 - 조건문 활용 - df [ ( 조건식 ) ]  ==
+- 예외처리 - try except ====
 
 3. Series
 - 시리즈 만들기 - pd.Series()
@@ -86,12 +93,14 @@
 # 02_Basic_Python
 
 1. 기본 파이썬
+- Pandas 불러오기
+- Numpy 불러오기
 - 숫자 변수 생성
 - 문자열 변수 생성
 - print 기본 옵션
 - 문자열 속 변수 설정
-- f-string
-- 정규표현식 - compile / match / search
+- 리스트 수정, 삭제, 정렬
+- 리스트 for문
 - 문자열 띄어쓰기
 - 문자열 찾기 - a.count( "  " ) / a.index( "  " )
 - 문자열 분리 - a.split( " " )
@@ -102,6 +111,7 @@
 - 열 합계 추가 - df.loc[ ' ' ] = df.sum(axis = 0)
 - 튜플
 - 딕셔너리
+- 딕셔너리 for문
 - 집합
 - 집합 연산
 - id값 출력
