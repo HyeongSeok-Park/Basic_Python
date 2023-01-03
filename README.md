@@ -34,7 +34,10 @@
 - 데이터프레임 정렬 - df.sort_values ( "컬럼명" , ascending=True )
 - 데이터프레임 고유값 카운트 - df [ " 컬럼명 " ].nunique()
 - 데이터프레임 고유값 출력 1 (중복값 제외) - df [ " 컬럼명 " ].unique()
-- 데이터프레임 고유값 출력 2 (중복값 카운트) - df [ " 컬럼명 " ].value_counts()
+- 데이터프레임 고유값 출력 2 (정렬) - sorted ( df [ " 컬럼명 " ].unique() )
+- 데이터프레임 고유값 출력 3 (중복값 카운트) - df [ " 컬럼명 " ].value_counts()
+- 데이터프레임 열에서 문자열 추출 - df[ " 컬럼명 " ].str [ : ] ====
+- 데이터프레임 열 타입 출력 - df [ [ " 컬럼명1 " , " 컬럼명2 " ] ].dtypes =========
 
 (데이터 합치기)
 - 데이터프레임 합치기 - merge ============
@@ -69,6 +72,7 @@
 
 (결측치)
 - 데이터프레임 결측치 확인 - df.isnull
+- 데이터프레임 결측치 정렬 - df.isnull().mean().sort_values(ascending=False)
 - 데이터프레임 결측치 삭제 1 (행 기준) - df.dropna ( axis = 0 )
 - 데이터프레임 결측치 삭제 2 (열 기준) - df.dropna ( axis = 1 )
 - 데이터프레임 결측치 대치 1 (데이터 입력) - df.fillna ( '특정값' )
@@ -76,8 +80,13 @@
 - 데이터프레임 결측치 대치 3 (후 데이터) - df.fillna ( method = "bfill" or "backfill" )
 - 데이터프레임 결측치 특정 column의 결측치 치환 - np.where() & pd.notnull()
 
+(타입변경)
+- 데이터프레임 열 타입변경1 (str -> datetime) - pd.to_datetime(df["컬럼명"])
+- 데이터프레임 열 타입변경2 (datetime -> str) - df["컬럼명"] = pd.DatetimeIndex(df["컬럼명"])/.year/.month
+- 데이터프레임 열 타입변경3 (str -> int) - df["컬럼명"].astype("타입명")
+
 - for문 활용
-- 조건문 활용 - df [ ( 조건식 ) ]  ==
+- 조건문 활용1 - df.loc[( 조건식 )] [ [ "컬럼명1", "컬럼명2" ] ]
 - 예외처리 - try except ====
 
 3. Series
