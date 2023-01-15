@@ -38,9 +38,19 @@
 - 데이터프레임 열에서 문자열 추출 - df[ " 컬럼명 " ].str [ : ] ====
 - 데이터프레임 열 타입 출력 - df [ [ " 컬럼명1 " , " 컬럼명2 " ] ].dtypes
 
-==========================
+(데이터프레임 타입변경)
+- 데이터프레임 열 타입변경1 (int -> str) - df["컬럼명"].astype("str")
+- 데이터프레임 열 타입변경2 (str -> int) - df["컬럼명"].astype("int")
+- 데이터프레임 열 타입변경3 (str -> datetime) - pd.to_datetime(df["컬럼명"])
+- 데이터프레임 열 타입변경4 (datetime -> str) - df["컬럼명"] = pd.DatetimeIndex(df["컬럼명"])/.year/.month
+
 (데이터 합치기)
-- 데이터프레임 합치기 - merge ============
+- 데이터프레임 합치기 1 - pd.concat ( [ df1, df2 ] )
+- 데이터프레임 합치기 2 - 데이터프레임 합치기 2 - pd.merge ( df1, df2, how="inner", on="None" )
+- 데이터프레임 간 데이터 비교 1 - set(df1["컬럼명"].unique()) - set(df2["date"].unique())
+- 데이터프레임 간 데이터 비교 2 - pd.merge(df1, df2, how='outer', indicator=True)
+
+======================================================
 
 (데이터 수정)
 - 데이터프레임 값 변경 - df.replace
@@ -64,7 +74,7 @@
 - 데이터프레임 값 조회 - df [ ' 컬럼명 ' ].str.contains ( ' 검색어 ' ) ; T/F 로 출력 =====
 
 (데이터 삭제)
-- 데이터프레임 행 삭제 1 (행 이름) - df.drop ( index = "a" )
+- 데이터프레임 행 삭제 1 (행넘버) - df.drop( index = [ 0, 1, ... ] )
 - 데이터프레임 행 삭제 2 (중복값) - df.drop_duplicates ( [ ' 컬럼명 ' ] ) ========
 - 데이터프레임 행 삭제 3 (인덱스넘버) - df.drop ( [ a ] ) ==========
 - 데이터프레임 행 삭제 4 (인덱스넘버) - df.drop ( df [ df [ ' 컬럼명 ' ] == a ].index ) ====
@@ -79,11 +89,6 @@
 - 데이터프레임 결측치 대치 2 (전 데이터) - df.fillna ( method = "ffill" or "pad" )
 - 데이터프레임 결측치 대치 3 (후 데이터) - df.fillna ( method = "bfill" or "backfill" )
 - 데이터프레임 결측치 특정 column의 결측치 치환 - np.where() & pd.notnull()
-
-(타입변경)
-- 데이터프레임 열 타입변경1 (str -> datetime) - pd.to_datetime(df["컬럼명"])
-- 데이터프레임 열 타입변경2 (datetime -> str) - df["컬럼명"] = pd.DatetimeIndex(df["컬럼명"])/.year/.month
-- 데이터프레임 열 타입변경3 (str -> int) - df["컬럼명"].astype("타입명")
 
 - for문 활용
 - 조건문 활용1 - df.loc[( 조건식 )] [ [ "컬럼명1", "컬럼명2" ] ]
